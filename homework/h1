@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include <malloc.h>
+using namespace std;
+
+int main(){
+
+    return 0;
+}
+
+//L1,L2为俩个链表 L为合并后的链表
+
+void split(LinkNode *&L,LinkNode *&L1,LinkNode *&L2){
+    LinkNode *p=L1;     //p指向L的1的头结点
+    LinkNode *q=L2;     //q指向L的1的头结点
+    LinkNode *pre=L;    //pre指向L的1的头结点
+    LinkNode *r=L;      //r指向L的尾结点
+    {
+        //将L1的链表一个的复制到L中，记录L链表中的尾结点
+    }
+    {
+        //判断L1的链表是否为空，为空的话销毁线性表
+    }
+    {
+        //将L2一个个链接在L的末尾，合并为L链表，记录L链表中的尾结点
+    }
+    {
+        //判断L2的链表是否为空，为空的话销毁线性表
+    }
+    {
+        //将L中的元素排序，从小到大
+    }
+}
