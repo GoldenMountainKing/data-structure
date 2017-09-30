@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
     
-    cout<<"请输入一个正整数n:"<<endl;
+    cout<<"璇疯緭鍏ヤ竴涓鏁存暟n:"<<endl;
     int n,i;
     cin>>n;
     long int s=1;
