@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #pragma once
 #include<malloc.h>
 
@@ -14,14 +14,14 @@ typedef struct Node2 {
 	DList *next;
 }HList;
 
-void CreatTable(HList *&h) {//²ÉÓÃ»¥½»Ê½·½Ê½½¨Á¢µ¥Á´±íµÄËã·¨
+void CreatTable(HList *&h) {//é‡‡ç”¨äº’äº¤å¼æ–¹å¼å»ºç«‹å•é“¾è¡¨çš„ç®—æ³•
 	int i, j;
 	DList *r, *s;
 	h = (HList *)malloc(sizeof(HList));
-	printf("±íµÄÐÐÊý£¬ÁÐÊý£º");
+	printf("è¡¨çš„è¡Œæ•°ï¼Œåˆ—æ•°ï¼š");
 	scanf("%d%d", &h->Row, &h->Col);
 	for (i = 0; i < h->Row; i++) {
-		printf("µÚ%dÐÐ£º", i + 1);
+		printf("ç¬¬%dè¡Œï¼š", i + 1);
 		s = (DList *)malloc(sizeof(DList));
 		for (j = 0; j < h->Col; j++) {
 			scanf("%d", &s->data[j]);
@@ -37,7 +37,7 @@ void CreatTable(HList *&h) {//²ÉÓÃ»¥½»Ê½·½Ê½½¨Á¢µ¥Á´±íµÄËã·¨
 	r->next = NULL;
 }
 
-void DestoryTable(HList *&h) {//Ïú»Ùµ¥Á´±íµÄËã·¨
+void DestoryTable(HList *&h) {//é”€æ¯å•é“¾è¡¨çš„ç®—æ³•
 	DList *pre = h->next, *p = pre->next;
 	while (p != NULL) {
 		free(pre);
@@ -46,10 +46,10 @@ void DestoryTable(HList *&h) {//Ïú»Ùµ¥Á´±íµÄËã·¨
 	}
 }
 
-void DispTable(HList *h) {//Êä³öµ¥Á´±íµÄËã·¨
+void DispTable(HList *h) {//è¾“å‡ºå•é“¾è¡¨çš„ç®—æ³•
 	int j;
-	DList *p=h->next;
-	while (p!=NULL)
+	DList *p = h->next;
+	while (p != NULL)
 	{
 		for (j = 0; j < h->Col; j++) {
 			printf("%4d", p->data[j]);
@@ -59,4 +59,4 @@ void DispTable(HList *h) {//Êä³öµ¥Á´±íµÄËã·¨
 	}
 }
 
-void 
+void
