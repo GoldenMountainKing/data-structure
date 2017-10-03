@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "栈的应用", "栈的应用\栈的应用.vcxproj", "{068AA7D2-1B98-48F9-843C-2CDDEE58DE05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{068AA7D2-1B98-48F9-843C-2CDDEE58DE05}.Debug|x64.ActiveCfg = Debug|x64
+		{068AA7D2-1B98-48F9-843C-2CDDEE58DE05}.Debug|x64.Build.0 = Debug|x64
+		{068AA7D2-1B98-48F9-843C-2CDDEE58DE05}.Debug|x86.ActiveCfg = Debug|Win32
+		{068AA7D2-1B98-48F9-843C-2CDDEE58DE05}.Debug|x86.Build.0 = Debug|Win32
+		{068AA7D2-1B98-48F9-843C-2CDDEE58DE05}.Release|x64.ActiveCfg = Release|x64
+		{068AA7D2-1B98-48F9-843C-2CDDEE58DE05}.Release|x64.Build.0 = Release|x64
+		{068AA7D2-1B98-48F9-843C-2CDDEE58DE05}.Release|x86.ActiveCfg = Release|Win32
+		{068AA7D2-1B98-48F9-843C-2CDDEE58DE05}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6FC2E4E1-E320-4BFE-B866-A5FB03E856B8}
+	EndGlobalSection
+EndGlobal
