@@ -16,7 +16,7 @@ typedef struct Node2 {//单链表的头结点声明
 
 void CreatTable(HList *&h) {//采用互交式方式建立单链表的算法
 	int i, j;
-	DList *r , *s;
+	DList *r =nullptr, *s;
 	h = (HList *)malloc(sizeof(HList));
 	printf("表的行数，列数：");
 	scanf_s("%d%d", &h->Row, &h->Col);
@@ -63,7 +63,7 @@ void DispTable(HList *h) {//输出单链表的算法
 
 void LinkTable(HList *h1, HList *h2, HList *&h) {//连接表的算法
 	int i, j, k;
-	DList *p = h1->next, *q, *s, *r;
+	DList *p = h1->next, *q, *s, *r= nullptr;
 	printf("连接字段是：第1个表序号，第2个表序号");
 	scanf_s("%d%d", &i, &j);
 	h = (HList *)malloc(sizeof(HList));
