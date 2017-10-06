@@ -1,6 +1,4 @@
 <div class="article_content csdn-tracking-statistics" id="article_content" style="overflow: hidden;" data-mod="popu_307" data-dsm="post">
-    
-<h2>在回复中说明不够清晰，在这里说明下，本文第一部分摘自《数据结构和算法分析-C语言描述》一书，只是做了一些概括和总结。</h2>
 <div><br>
 </div>
 <h2>一、后缀表达式求值</h2>
