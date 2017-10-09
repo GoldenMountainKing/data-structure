@@ -4,8 +4,8 @@
 #include<stdlib.h>
 using namespace std;
 #define CLOCKS_PRE_SEC 1000
-//--------------·½·¨Ò»--------------
-bool prime1(long int n){    //·½·¨Ò»:ÅĞ¶ÏÕıÕûÊınÊÇ·ñÎªËØÊı
+//--------------æ–¹æ³•ä¸€--------------
+bool prime1(long int n){    //æ–¹æ³•ä¸€:åˆ¤æ–­æ­£æ•´æ•°næ˜¯å¦ä¸ºç´ æ•°
     long i;
     for(i=2;i<n;i++){
         if(n%i==0)
@@ -21,11 +21,11 @@ void Prime1Time(long int n){
         if(prime1(i))
             sum++;
     t=clock()-t;
-    cout<<"·½·¨2:"<<endl;
-    cout<<"½á¹û:2~"<<n<<"µÄËØÊı¸öÊı:"<<sum<<endl;
-    cout<<"ÓÃÊ±:"<<((float)t)/CLOCKS_PRE_SEC<<endl;
+    cout<<"æ–¹æ³•2:"<<endl;
+    cout<<"ç»“æœ:2~"<<n<<"çš„ç´ æ•°ä¸ªæ•°:"<<sum<<endl;
+    cout<<"ç”¨æ—¶:"<<((float)t)/CLOCKS_PRE_SEC<<endl;
 }              
-//--------------·½·¨¶ş--------------
+//--------------æ–¹æ³•äºŒ--------------
 bool prime2(long int n){
     long i;
     for(i=2;i<=(int)sqrt(n);i++)
@@ -41,14 +41,14 @@ void Prime2Time(long int n){
         if(prime2(i))
             sum++;
     t=clock()-t;
-    cout<<"·½·¨2:"<<endl;
-    cout<<"½á¹û:2~"<<n<<"µÄËØÊı¸öÊı:"<<sum<<endl;
-    cout<<"ÓÃÊ±:"<<((float)t)/CLOCKS_PRE_SEC<<endl;
+    cout<<"æ–¹æ³•2:"<<endl;
+    cout<<"ç»“æœ:2~"<<n<<"çš„ç´ æ•°ä¸ªæ•°:"<<sum<<endl;
+    cout<<"ç”¨æ—¶:"<<((float)t)/CLOCKS_PRE_SEC<<endl;
 }
 //-------------------------------------------------
 int main(){
     long int n;
-    cout<<"n(´óÓÚ100000):"<<endl;
+    cout<<"n(å¤§äº100000):"<<endl;
     cin>>n;
     if(n<100000) 
         return 0;
