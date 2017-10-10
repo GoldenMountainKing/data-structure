@@ -1,12 +1,12 @@
 #include"hlist.h"
 int main() {
 	HList *h1, *h2, *h;
-	printf("±í1£º\n");
+	printf("è¡¨1ï¼š\n");
 	CreatTable(h1);
-	printf("±í2£º\n");
+	printf("è¡¨2ï¼š\n");
 	CreatTable(h2);
 	LinkTable(h1, h2, h);
-	printf("Á´½ÓµÄ½á¹û±íÎª£º\n");
+	printf("é“¾æŽ¥çš„ç»“æžœè¡¨ä¸ºï¼š\n");
 	DispTable(h);
 	DestoryTable(h1);
 	DestoryTable(h2);
