@@ -1,17 +1,17 @@
-// 到2107年10月22号所有的算法的结构体声明
+// 到2017年11月2号所有的算法的结构体声明
 
 #define MaxSize 50
 typedef ElemType char;
 //(1)顺序表
 typedef struct{
-    ElemType data[MaxSize];
-    int length;
+    ElemType data[MaxSize];//所存的元素
+    int length;//顺序表的长度
 }SqList;
 
 //(2)链表
 typedef struct LNode{
-    ElemType data;
-    struct LNode *next;
+    ElemType data;//所存的元素
+    struct LNode *next;//指向下一个数据结点
 }LinkNode;
 
 //(3)双链表
@@ -27,7 +27,7 @@ typedef struct{
     int top;//栈顶指针，即存放栈顶元素在data数组中的下标
 }SqStack;
 
-//(5)共享栈的顺序结构
+//(5)共享栈的顺序结构(老师没讲)
 typedef struct{
     ElemType data[MaxSize];
     int top1,top2;
@@ -75,3 +75,20 @@ typedef struct snode{
     char data;
     struct snode *next;
 }LinkStrNode;
+
+//(12)稀疏矩阵三元组
+#define M<稀疏矩阵行数>
+#define N<稀疏矩阵列数>
+#define MaxSize<稀疏矩阵中非零元素最多的个数>
+
+typedef struct{//元素结点
+    int r;//行号
+    int c;//列号
+    ElemType d;//元素值
+}TupNode;;//三元组类型
+typedef struct{//头结点
+    int rows;//行数
+    int cols;//列数
+    int nums;//非零元素个数
+    TupNode data[MaxSize];
+}TSMatrix;//三元组顺序表的类型
