@@ -1,4 +1,4 @@
-// 到2017年11月2号所有的算法的结构体声明
+// 到2017年11月3号所有的算法的结构体声明
 
 #define MaxSize 50
 typedef ElemType char;
@@ -92,3 +92,22 @@ typedef struct{//头结点
     int nums;//非零元素个数
     TupNode data[MaxSize];
 }TSMatrix;//三元组顺序表的类型
+
+//(13)双亲储存结构
+typedef struct{
+    ElemType data;
+    int length;
+}PTree[MaxSize];
+
+//(14)孩子链存储结构
+typedef struct node{
+    ElemType data;
+    struct node *sons[MaxSize];
+}TSonNode;
+
+//(15)孩子兄弟链存储结构
+typedef struct tnode{
+    ElemType data;
+    struct tnode *hp;
+    struct tnode *vp;
+}TSBNode;
