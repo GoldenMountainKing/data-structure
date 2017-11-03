@@ -95,19 +95,19 @@ typedef struct{//头结点
 
 //(13)双亲储存结构
 typedef struct{
-    ElemType data;
-    int length;
+    ElemType data;//存放结点的值
+    int parent;//存放双亲的位置
 }PTree[MaxSize];
 
-//(14)孩子链存储结构
+//(14)孩子链存储结构(浪费)
 typedef struct node{
-    ElemType data;
-    struct node *sons[MaxSize];
+    ElemType data;//存放结点的值
+    struct node *sons[MaxSize];//指向孩子结点
 }TSonNode;
 
 //(15)孩子兄弟链存储结构
 typedef struct tnode{
     ElemType data;
-    struct tnode *hp;
-    struct tnode *vp;
+    struct tnode *hp;//指向兄弟
+    struct tnode *vp;//指向孩子结点
 }TSBNode;
