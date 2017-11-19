@@ -21,7 +21,7 @@ int main() {
 	DispBTree(s);
 	s0 = FindNode(s, 'H');
 	printf("\nH结点的左孩子为：%c", LchildNode(s0)->data);
-	printf("\nH结点的左孩子为：%c", RchildNode(s0)->data);
+	printf("\nH结点的右孩子为：%c", RchildNode(s0)->data);
 	printf("\n树的高度为：%d", BTHeight(s));
 	printf("\n销毁树\n"); DestroyBTree(s);
 	system("pause");
