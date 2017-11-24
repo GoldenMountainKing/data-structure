@@ -2,7 +2,6 @@
 #include<stdio.h>
 #include<malloc.h>
 #include"btree.h"
-#include"sqstack.h"
 
 
 void CreateBTreee(BTNode *&b, char *str) {
@@ -50,44 +49,7 @@ void DispBTree(BTNode *b) {
 	}
 }
 
-BTNode *LchildNode(BTNode *p) {//返回左孩子结点
-	return p->lchild;
-}
 
-BTNode *RchildNode(BTNode *p) {//返回右孩子结点
-	return p->rchild;
-}
-
-BTNode *FindNode(BTNode *b, ElemType x) {//查找结点
-	BTNode *p;
-	if (b == NULL) {
-		return NULL;
-	}
-	else if (b->data0 == x) {
-		return b;
-	}
-	else {
-		p = FindNode(b->lchild, x);
-		if (p != NULL) {
-			return p;
-		}
-		else {
-			return FindNode(b->rchild, x);
-		}
-	}
-}
-
-int BTHeight(BTNode *b) {//求树的高度
-	int lchild, rchild;
-	if (b == NULL) {
-		return (0);
-	}
-	else {
-		lchild = BTHeight(b->lchild);
-		rchild = BTHeight(b->rchild);
-		return (lchild > rchild) ? (lchild + 1) : (rchild + 1);
-	}
-}
 
 void DestroyBTree(BTNode *&b) {
 	if (b != NULL) {
@@ -98,38 +60,22 @@ void DestroyBTree(BTNode *&b) {
 }
 
 int SumTree(BTNode *b)
-{//求值算法
-	int c = 0;
-	SqStack *s;
-	InitStack(s);
-	BTNode *p, *p0, *p1, *p2, *p3;
-	p = b;
-	p0 = (BTNode *)malloc(sizeof(BTNode));
-	if (b != NULL) {
-		Push(s, p);
-		GetTop(s,p0);
-		//判断栈顶的结点是否有左孩子，有的话递归调用
-		if (p0!= NULL)
-		{
-			c += SumTree(p0->lchild);
-		} 
-		//转到右孩子，递归调用
-		if (p0 != NULL)
-		{
-			c += SumTree(p0->rchild);
-		}
-		
-		//退栈俩个值和一个运算符，并且计算它们的值
-		Pop(s, p1); int a = (int)p1->data0;
-		Pop(s, p2); int b = (int)p2->data0;
-		Pop(s, p3); char ch = p3->data0;
-		switch (ch)
-		{
-		case '+':c = a + b; break;
-		case '-':c = a + b; break;
-		case '*':c = a + b; break;
-		case '/':c = a + b; break;
-		}
-		return c;
+{
+	int number0, number1;
+	if (b == NULL) {
+		return 0;
 	}
+	if (b->rchild == NULL&&b->rchild == NULL) {
+		return b->data0 - '0';
+	}
+	number0 = SumTree(b->lchild);
+	number1 = SumTree(b->rchild);
+	
+		switch (b->data0)
+		{
+		case '+':return number0 + number1;
+		case '-':return number0 - number1;
+		case '*':return number0 * number1;
+		case '/':return number0 / number1;
+		}
 }

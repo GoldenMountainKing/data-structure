@@ -10,7 +10,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include"btree.h"
-#include"sqstack.h"
 
 int main() 
 {
@@ -19,7 +18,7 @@ int main()
 	printf("输出的树为：");
 	CreateBTreee(b, str);
 	DispBTree(b);
-	printf("输出的树的值为：%d", SumTree(b)); ;
+	printf("\n输出的树的值为：%d", SumTree(b)); ;
 	printf("\n销毁树\n"); DestroyBTree(b);
 	system("pause");
 	return 0;

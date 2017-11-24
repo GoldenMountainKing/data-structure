@@ -21,15 +21,9 @@
     <ClCompile Include="btree.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
-    <ClCompile Include="sqstack.cpp">
-      <Filter>头文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="btree.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="sqstack.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

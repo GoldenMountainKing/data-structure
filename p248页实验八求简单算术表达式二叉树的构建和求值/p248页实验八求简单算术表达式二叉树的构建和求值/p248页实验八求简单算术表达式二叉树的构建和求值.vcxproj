@@ -113,11 +113,9 @@
   <ItemGroup>
     <ClCompile Include="btree.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="sqstack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="btree.h" />
-    <ClInclude Include="sqstack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
