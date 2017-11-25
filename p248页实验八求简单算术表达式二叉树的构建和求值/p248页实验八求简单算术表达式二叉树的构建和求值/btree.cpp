@@ -4,7 +4,7 @@
 #include"btree.h"
 
 
-void CreateBTreee(BTNode *&b, char *str) {
+void CreateBTree(BTNode *&b, char *str) {
 	BTNode *St[MaxSize0], *p = NULL;
 	int top = -1, k, j = 0;
 	char ch;
@@ -66,7 +66,7 @@ int SumTree(BTNode *b)
 		return 0;
 	}
 	if (b->rchild == NULL&&b->rchild == NULL) {
-		return b->data0 - '0';
+		return b->data0 - 48;
 	}
 	number0 = SumTree(b->lchild);
 	number1 = SumTree(b->rchild);

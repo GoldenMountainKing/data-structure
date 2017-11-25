@@ -1,7 +1,5 @@
-﻿  btree.cpp
+﻿  main.cpp
+  btree.cpp
   正在生成代码...
 e:\github_box\code\data-structure\p248页实验八求简单算术表达式二叉树的构建和求值\p248页实验八求简单算术表达式二叉树的构建和求值\btree.cpp(81): warning C4715: “SumTree”: 不是所有的控件路径都返回值
-  正在编译...
-  main.cpp
-  正在生成代码...
   p248页实验八求简单算术表达式二叉树的构建和求值.vcxproj -> E:\github_box\code\data-structure\p248页实验八求简单算术表达式二叉树的构建和求值\Debug\p248页实验八求简单算术表达式二叉树的构建和求值.exe

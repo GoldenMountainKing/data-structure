@@ -16,9 +16,9 @@ int main()
 	char str[] = { "-(2,2)" };
 	BTNode *b;
 	printf("输出的树为：");
-	CreateBTreee(b, str);
+	CreateBTree(b, str);
 	DispBTree(b);
-	printf("\n输出的树的值为：%d", SumTree(b)); ;
+	printf("\n输出的树的值为：%d", SumTree(b)); 
 	printf("\n销毁树\n"); DestroyBTree(b);
 	system("pause");
 	return 0;

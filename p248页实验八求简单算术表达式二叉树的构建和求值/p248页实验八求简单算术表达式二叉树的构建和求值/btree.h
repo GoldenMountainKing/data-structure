@@ -6,7 +6,7 @@ typedef struct node {
 	struct node *lchild;
 	struct node *rchild;
 }BTNode;
-void CreateBTreee(BTNode *&b, char *str);
+void CreateBTree(BTNode *&b, char *str);
 void DispBTree(BTNode *b);
 void DestroyBTree(BTNode *&b);
 int SumTree(BTNode *b);
