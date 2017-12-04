@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p308页第五题无向图的的深度和广度遍历", "p308页第五题无向图的的深度和广度遍历\p308页第五题无向图的的深度和广度遍历.vcxproj", "{D3D03D20-7540-4A11-9DA9-5333B1F6ACF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3D03D20-7540-4A11-9DA9-5333B1F6ACF2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D3D03D20-7540-4A11-9DA9-5333B1F6ACF2}.Debug|Win32.Build.0 = Debug|Win32
+		{D3D03D20-7540-4A11-9DA9-5333B1F6ACF2}.Release|Win32.ActiveCfg = Release|Win32
+		{D3D03D20-7540-4A11-9DA9-5333B1F6ACF2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
