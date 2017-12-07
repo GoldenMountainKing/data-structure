@@ -16,6 +16,10 @@ int main(){
 	DispAdj(G);
 	printf("深度递归输出");
 	DFS(G,0);printf("\n");
+
+	printf("深度递归输出(非递归）");
+	DFS1(G, 0); printf("\n");
+
 	printf("广度输出");
 	BFS(G,0);printf("\n");
 	DestroyAdj(G);

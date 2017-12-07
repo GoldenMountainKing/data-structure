@@ -1,6 +1,8 @@
-#include"graph.h"
-#include<malloc.h>
+//#include"graph.h"
+#include"sqqueue.h"
+#include"sqstack.h"
 #include<stdio.h>
+
 void CreateAdj(AdjGraph *&G,int A[MAXV][MAXV],int n,int e) //创建图的邻接表
 {
 	int i,j;
@@ -54,32 +56,6 @@ void DestroyAdj(AdjGraph *&G)		//销毁图的邻接表
 
 
 
-void InitQueue(SqQueue *&q)
-{	q=(SqQueue *)malloc (sizeof(SqQueue));
-	q->front=q->rear=0;
-}
-void DestroyQueue(SqQueue *&q)
-{
-	free(q);
-}
-bool QueueEmpty(SqQueue *q)
-{
-	return(q->front==q->rear);
-}
-bool enQueue(SqQueue *&q,ElemType e)
-{	if ((q->rear+1)%MaxSize==q->front)	//队满上溢出
-		return false;
-	q->rear=(q->rear+1)%MaxSize;
-	q->data[q->rear]=e;
-	return true;
-}
-bool deQueue(SqQueue *&q,ElemType &e)
-{	if (q->front==q->rear)				//队空下溢出
-		return false;
-	q->front=(q->front+1)%MaxSize;
-	e=q->data[q->front];
-	return true;
-}
 
 
 int visited[MAXV] = {0};
@@ -97,11 +73,29 @@ void DFS(AdjGraph *G,int v){//图的深度优先遍历（递归算法）
 }
 
 void DFS1(AdjGraph *G,int v){//图的深度优先遍历（非递归算法
-	int visited2[MAXV] = { 0 };
+	int w;
 	ArcNode *p;
-	printf("%d", v);
-	p = G->adjlist[v].firstarc;
-
+	SqStack *s;
+	InitStack(s);
+	int visited2[MAXV];
+	for (int i = 0; i < G->n; i++) {
+		visited2[i] = 0;
+	}
+	Push(s, v);
+	while (!StackEmpty(s)) {
+		Pop(s, w);
+		p = G->adjlist[w].firstarc;
+		while (p!=NULL){
+			if (visited2[w] == 0) {//如果等于0就不进栈
+				Push(s, p->adjvex);
+			}
+			p = p->nextarc;
+		}
+		if (visited2[w] == 0) {
+			printf("%d", w);
+			visited2[w] = 1;
+		}
+	}
 }
 
 void BFS(AdjGraph *G,int v){//图的广度优先遍历

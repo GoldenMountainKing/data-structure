@@ -21,19 +21,8 @@ typedef struct
 } AdjGraph;						//完整的图邻接表类型
 
 
-//队列操作
-typedef int ElemType;
-typedef struct 
-{	
-	ElemType data[MaxSize];
-	int front,rear;		//队首和队尾指针
-} SqQueue;
 
-void InitQueue(SqQueue *&q);
-void DestroyQueue(SqQueue *&q);
-bool QueueEmpty(SqQueue *q);
-bool enQueue(SqQueue *&q,ElemType e);
-bool deQueue(SqQueue *&q,ElemType &e);
+
 
 
 
@@ -42,7 +31,6 @@ void CreateAdj(AdjGraph *&G,int A[MAXV][MAXV],int n,int e);//创建邻接表
 void DispAdj(AdjGraph *G);//输出邻接表
 
 void DestroyAdj(AdjGraph *&G);//销毁邻接表
-
 
 void DFS(AdjGraph *G,int v);//图的深度优先遍历（递归算法）
 
